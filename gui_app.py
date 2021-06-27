@@ -7,7 +7,7 @@ def gui():
 	st.write('# Q-voter model')
 
 	st.sidebar.markdown("## Select type of model and parameters")
-	select_event = st.sidebar.selectbox('Wcich model do you want to chose?',
+	select_event = st.sidebar.selectbox('Which model do you want to chose?',
 																			['conformity + independence', 'conformity + nonconformism'])
 
 	start_grid = ['order up', 'order down', 'mess' , 'vertical stripes', 'horizontal stripes', 'circle', 'square', 'chessboard']
@@ -16,7 +16,7 @@ def gui():
 		MA = st.sidebar.slider("Choose size of N square grid", 10 ,200, step = 10)
 		pA = st.sidebar.slider("Choose nonconformism propability p", min_value =0.0 ,max_value=1.0, step=0.05)
 		fA = st.sidebar.slider("Choose f",  min_value =0.0 ,max_value=1.0, step=0.05)
-		MCSA = st.sidebar.slider("Choose MCS", 1,10000)
+		MCSA = st.sidebar.number_input('Choose MCS', value=100, step=1)
 		start_setupA = st.sidebar.selectbox('How to set up start grid', start_grid)
 		qA = st.sidebar.slider("Choose number of neighbours", 0,10)
 		random_qA = st.sidebar.selectbox('How to choose neighbours?', 
@@ -25,7 +25,7 @@ def gui():
 	else:
 		MB= st.sidebar.slider("Choose size N of square grid ", 10 ,200, step =10)
 		pB = st.sidebar.slider("Choose p",  min_value =0.0 ,max_value=1.0, step=0.05)
-		MCSB = st.sidebar.slider("Choose MCS", 1,10000)
+		MCSB = st.sidebar.number_input('Choose MCS', value=100, step=1)
 		start_setupB= st.sidebar.selectbox('How to set up start grid', start_grid)
 		qB = st.sidebar.slider("Choose number of neighbours", 0,10)
 		random_qB = st.sidebar.selectbox('How to choose neighbours?', 
