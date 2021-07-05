@@ -5,4 +5,7 @@ Link:
 
 https://votermodel.herokuapp.com/
 
+![photo](img/example1.png)
+![photo](img/example2.png)
+
 
